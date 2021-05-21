@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+* {
+  color: white;
+}
+
+body {
+  margin: 0%;
+  font-family: 'Dancing Script', cursive;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 10vw 80vw 10vw;
+  grid-template-rows: 10vh 80vh 10vh;
+  align-items: center;
+  justify-items: center;
+  background-color: black;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("water.jpg");
+  background-size: cover;
+  filter: brightness(90%);
+}
+
+.background .water {
+  position: absolute;
+  background-image: url("watercut.png");
+  background-size: cover;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  filter: url("#turbulence") ;
+}
+
+h1 {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 2em;
+  display: flex;
+  align-self: center;
+  color: white;
+  z-index: 10;
+  justify-content: center;
+}
+
+main {
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 50vw;
+}
+
+#infoSection {
+  display: grid;
+  transform: translateZ(20px) perspective(1000px);
+  grid-template-columns: 5vw 40vw 5vw;
+  grid-template-rows: 5vh 5vh 60vh 5vh;
+}
+
+p {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-self: center;
+}
+
+ol {
+  grid-column: 2;
+  grid-row: 3;
+  box-shadow: 0px 0px 10px 5px rgb(0 0 0 / 49%), 0px 0px 20px 5px rgb(0 0 0 / 12%);
+  list-style: '↪ ';
+  cursor: progress;
+  max-width: 70vw;
+  min-height: 50vh;
+  backdrop-filter: blur(1px);
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.styleHeadButtons {
+  box-shadow: 5px 4px 10px 3px rgb(0 0 0 / 49%), 13px 7px 20px 0px rgb(0 0 0 / 12%);
+}
+
+.video-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+.asideCollumBox {
+  grid-column: 1;
+  grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateX(5px);
+}
+
+.firstLineBox {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#texto-tarefa {
+  width: 60%;
+  transform-style: preserve-3d;
+  transform: translateZ(10px) perspective(1000px);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.lastLineBox {
+  grid-column: 2;
+  grid-row: 4;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  transform-style: preserve-3d;
+  transform:  perspective(500px);
+  border: hidden;
+  overflow: hidden;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+button {
+  background-color: transparent;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 5px 4px 10px 3px rgb(0 0 0 / 49%), 13px 7px 20px 0px rgb(0 0 0 / 12%);
+  font-family: 'Dancing Script', cursive;
+}
+
+.mover-cima, .mover-baixo {
+  transform-style: preserve-3d;
+  transform:  perspective(500px);
+  box-shadow: 5px 4px 10px 3px rgb(0 0 0 / 49%), 13px 7px 20px 0px rgb(0 0 0 / 12%);
+}
+
+.backgroundList {
+  background: rgba(0, 162, 255, 0.568);
+  transform-style: preserve-3d;
+  transform:  perspective(500px) translateX(1px);
+}
+
+#salvar-tarefas {
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#criar-tarefa {
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+input {
+  color: black;
+}
+
+.todoBox {
+  display: grid;
+  backdrop-filter: blur(5px);
+  transform-style: preserve-3d;
+  transform: translateZ(20px);
+  box-shadow: 14px 13px 5px 7px #00000070, 20px 19px 20px 0px #00000060, 0px 0px 20px 5px #00000060, inset 10px 10px 20px 0px #00000070, inset -1px 0px 20px 0px #00000070, inset 0px -7px 20px 0px #00000070;
+  border-radius: 14px;
+  overflow: hidden;
+  grid-column: 2;
+  grid-row: 2;
+  grid-template-columns: 1vw 50vw;
+}

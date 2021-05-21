@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>🚀  To do List 🚀 </title>
+  </head>
+    <body>
+      <div class="background ">
+        <div  class="water"></div>
+      </div>
+      <svg>
+        <filter id="turbulence" x="00" y="0.54" width="100%" height="100%">
+          <feTurbulence id="sea-filter" numOctaves="3" seed="2" baseFrequency="0.02 0.08"></feTurbulence>
+          <feDisplacementMap scale="30" in="SourceGraphic"></feDisplacementMap>
+          <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="60s" keyTimes="0;0.5;1" values="0.0 0.03;0.04 0.08;0.02 0.18" repeatCount="indefinite"/>
+        </filter>
+      </svg>
+    <div class=".background "></div>
+    <div  class="todoBox" data-tilt data-tilt-glare data-tilt-max-glare="0.2" >
+      <h1>Minha Lista de Tarefas</h1>
+      <main>
+        <section id="infoSection"></section>
+      </main>
+    </div>
+    </body>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector(".todoBox"), {
+        max: 55,
+        speed: 100
+
+      });
+    </script>
+</html>
+
